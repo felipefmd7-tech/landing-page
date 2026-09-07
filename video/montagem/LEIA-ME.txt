@@ -1,0 +1,13 @@
+ProBio Solutions - montagem para fundo animado
+
+Ordem: canavial > dornas > mosto afastado > mosto proximo.
+Duracao: 18 segundos. Resolucao original: 1344 x 768. 24 fps. Sem audio.
+Dissolucoes de 0,5 segundo, incluindo retorno ao canavial para loop continuo.
+
+probio-fermentacao-loop.mp4: versao otimizada para a LP.
+probio-fermentacao-master.mp4: versao de maior qualidade para arquivo.
+probio-fermentacao-capa.jpg: imagem inicial enquanto o video carrega.
+
+Integracao sugerida: video autoplay muted loop playsinline, com poster, botao de pausa e respeito a prefers-reduced-motion. Sem texto embutido.
+Originais e marcas de origem preservados. Cenas geradas por IA fornecidas pelo usuario.
+O site nao foi alterado nesta montagem.

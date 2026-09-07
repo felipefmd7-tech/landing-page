@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProBio Solutions — Fermentação e Diagnóstico Sucroenergético</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ground: #070E1A;          /* Azul meia-noite profundo */
+      --accent: #E8A838;          /* Âmbar / Mosto / Etanol */
+      --cyan: #00DCF8;            /* Ciano tecnológico */
+      --tx-lead: #DADCDE;
+      --mono: 'IBM Plex Mono', monospace;
+      --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    }
+    body {
+      background: var(--ground);
+      color: #fff;
+      font-family: var(--sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navbar */
+    .nav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-family: var(--mono);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .logo span { color: var(--accent); }
+    .nav-btn {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 4px;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 110px 48px 120px;
+    }
+
+    /* Vídeo em Loop de Fundo */
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: saturate(0.9) contrast(1.05) brightness(0.85);
+    }
+
+    /* Camada de Gradiente Escuro (Estilo Sight Machine) */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        radial-gradient(130% 100% at 14% 42%, rgba(7,14,26,0.96) 0%, rgba(7,14,26,0.85) 35%, rgba(7,14,26,0.45) 68%, rgba(7,14,26,0.18) 100%),
+        linear-gradient(180deg, rgba(7,14,26,0.6) 0%, rgba(7,14,26,0) 22%, rgba(7,14,26,0.2) 60%, rgba(7,14,26,0.85) 100%);
+    }
+
+    /* Conteúdo Hero */
+    .hero-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.2vw, 68px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+    h1 .highlight {
+      color: var(--accent);
+    }
+
+    .lead {
+      font-size: clamp(17px, 1.4vw, 21px);
+      line-height: 1.6;
+      color: var(--tx-lead);
+      max-width: 580px;
+      margin-bottom: 36px;
+    }
+
+    .cta-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .btn-main {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 4px;
+      background: var(--accent);
+      color: #000;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .btn-main:hover {
+      background: #ffd678;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #C5CBD6;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: #fff; }
+
+    /* Card com Feixe de Luz (Sight Machine border-beam) */
+    .hero-card {
+      position: relative;
+      background: rgba(7, 18, 33, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.1);
+    }
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1.5px;
+      pointer-events: none;
+      background: conic-gradient(from var(--angle), transparent 0deg, transparent 240deg, rgba(232,168,56,0.3) 280deg, var(--accent) 330deg, transparent 360deg);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: rotate-beam 8s linear infinite;
+    }
+    @keyframes rotate-beam {
+      to { --angle: 360deg; }
+    }
+
+    .card-title {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-title .status {
+      color: var(--cyan);
+      font-size: 10px;
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .kpi-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      padding: 16px;
+    }
+    .kpi-val {
+      font-family: var(--mono);
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .kpi-val.highlight { color: var(--accent); }
+    .kpi-lbl {
+      font-size: 12px;
+      color: #8C93A0;
+      margin-top: 4px;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #B2B8C4;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 18px;
+    }
+
+    /* Faixa Inferior de Indicadores */
+    .stat-strip {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 3;
+      background: rgba(5, 10, 18, 0.75);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 48px;
+    }
+    .stat-strip-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-n {
+      font-family: var(--mono);
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .stat-t {
+      font-size: 12px;
+      color: #8A92A0;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-container { grid-template-columns: 1fr; }
+      .stat-strip { position: static; }
+      .hero { padding: 100px 24px 60px; }
+      .nav { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="logo">PROBIO <span>SOLUTIONS</span></div>
+    <a href="#contato" class="nav-btn">Falar com Especialista</a>
+  </nav>
+
+  <section class="hero">
+    <!-- Vídeo dos 4 Takes em Loop Contínuo Sem Seam -->
+    <video class="hero-video-bg" autoplay muted loop playsinline preload="auto" poster="probio-fermentacao-poster.jpg">
+      <source src="probio-fermentacao-hero-web.mp4" type="video/mp4">
+      <source src="probio-fermentacao-hero-sightmachine.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="eyebrow">Diagnóstico Sucroenergético de Precisão</div>
+        <h1>Controle total da fermentação. <span class="highlight">Mais etanol por tonelada.</span></h1>
+        <p class="lead">
+          Inteligência analítica e microbiológica aplicada diretamente às dornas de fermentação. Estabilize o mosto, mitigue contaminações e impulsione o rendimento industrial da sua usina.
+        </p>
+        <div class="cta-group">
+          <a href="#diagnostico" class="btn-main">Solicitar Diagnóstico</a>
+          <a href="#processo" class="btn-ghost">
+            Conhecer metodologia &nbsp;→
+          </a>
+        </div>
+      </div>
+
+      <!-- Card com Efeito de Luz Rotativo (Sight Machine style) -->
+      <div class="hero-card">
+        <div class="card-title">
+          <span>Eficiência de Fermentação</span>
+          <span class="status">● SAFRA ATIVA</span>
+        </div>
+        <div class="kpi-row">
+          <div class="kpi-box">
+            <div class="kpi-val highlight">+2.8%</div>
+            <div class="kpi-lbl">Rendimento Fermentativo</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-val">91.4%</div>
+            <div class="kpi-lbl">Viabilidade da Levedura</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          Acompanhamento dinâmico do processo fermentativo: do canavial ao mosto em turbilhonamento, garantindo máxima conversão em etanol.
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat-strip-inner">
+        <div class="stat-item">
+          <span class="stat-n">+50 Mi L</span>
+          <span class="stat-t">Etanol Adicional Gerado</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-n">24 Horas</span>
+          <span class="stat-t">Tempo de Resposta em Safra</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-n">Melle-Boinot</span>
+          <span class="stat-t">Especialistas em Reciclo de Levedura</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
