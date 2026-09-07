@@ -1877,3 +1877,432 @@ details[open] > summary > svg:last-child {
     font-size: 12px;
   }
 }
+/* Full-width desktop: scale readable content with the available canvas.
+   Smaller split-screen and mobile layouts retain their existing composition. */
+@media (min-width: 1101px) {
+  .shell {
+    width: min(100rem, calc(100% - 7vw));
+  }
+  .header {
+    height: 100px;
+  }
+  .navigation,
+  .header-cta {
+    font-size: 1rem;
+  }
+  .brand > svg {
+    width: 48px;
+    height: 48px;
+  }
+  .brand > span {
+    font-size: 32px;
+  }
+  .brand-sub {
+    font-size: 11px;
+  }
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(36px, 4vw, 72px);
+    padding-block: 56px 64px;
+    min-height: auto;
+  }
+  h1 {
+    font-size: clamp(3.4rem, 4.25vw, 5rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+  h2,
+  .demo-copy h2 {
+    font-size: clamp(2.7rem, 3.2vw, 3.75rem);
+    letter-spacing: -0.035em;
+  }
+  .hero-description {
+    font-size: clamp(1.125rem, 1.25vw, 1.4rem);
+    max-width: 36rem;
+    line-height: 1.65;
+  }
+  .eyebrow,
+  .demo-copy .eyebrow,
+  .diagnostic-detail .eyebrow,
+  .final-inner .eyebrow {
+    font-size: 0.8125rem;
+    letter-spacing: 0.09em;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .button,
+  .text-link,
+  .demo-contact,
+  .calculator-result .button,
+  .faq-section .text-link {
+    font-size: 1rem;
+  }
+  .button {
+    padding: 18px 24px;
+  }
+  .hero-note {
+    font-size: 1rem;
+  }
+  .hero-visual {
+    width: 100%;
+    max-width: none;
+    padding-bottom: 155px;
+  }
+  .analysis-window {
+    margin-right: 28px;
+  }
+  .window-top {
+    font-size: 0.875rem;
+    padding: 16px 20px;
+  }
+  .sample-tag,
+  .micro {
+    font-size: 0.75rem;
+  }
+  .window-content {
+    padding: 26px;
+  }
+  .window-content h3 {
+    font-size: 1.625rem;
+  }
+  .status-pill {
+    font-size: 0.6875rem;
+  }
+  .mini-kpis > div > span,
+  .mini-kpis strong span,
+  .chart-heading {
+    font-size: 0.875rem;
+  }
+  .mini-kpis strong {
+    font-size: 2.375rem;
+  }
+  .chart-axis {
+    font-size: 0.75rem;
+  }
+  .finding-row strong {
+    font-size: 0.875rem;
+  }
+  .finding-row div > span {
+    font-size: 0.8125rem;
+  }
+  .whatsapp-preview {
+    width: clamp(310px, 21vw, 370px);
+    right: 0;
+  }
+  .wa-top strong,
+  .wa-bubble,
+  .wa-bubble > strong {
+    font-size: 0.9375rem;
+  }
+  .wa-top span,
+  .wa-gain > span,
+  .wa-footer {
+    font-size: 0.8125rem;
+  }
+  .wa-gain b {
+    font-size: 0.875rem;
+  }
+  .wa-bubble small {
+    font-size: 0.6875rem;
+  }
+  .wa-body {
+    padding: 16px;
+  }
+  .wa-bubble {
+    padding: 15px;
+  }
+  .visual-footnote {
+    font-size: 0.75rem;
+    max-width: 230px;
+    bottom: 36px;
+  }
+  .principles-inner {
+    padding-block: 25px;
+  }
+  .principles-inner > span {
+    font-size: 0.8125rem;
+  }
+  .principles p {
+    font-size: 1rem;
+  }
+  .principles svg {
+    width: 25px;
+    height: 25px;
+  }
+  .section {
+    padding-block: 72px;
+  }
+  .section-intro {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 34px;
+  }
+  .section-intro > p {
+    max-width: 38rem;
+    font-size: 1.1875rem;
+    line-height: 1.7;
+  }
+  .diagnostic-layout {
+    grid-template-columns: minmax(290px, 0.65fr) 2fr;
+  }
+  .diagnostic-tab {
+    font-size: 1rem;
+    padding-block: 20px;
+  }
+  .tab-note {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+  .diagnostic-detail {
+    padding: 34px 38px;
+    min-height: 0;
+  }
+  .diagnostic-detail h3 {
+    font-size: 2rem;
+    max-width: 48rem;
+  }
+  .diagnostic-detail > p {
+    max-width: 52rem;
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+  .diagnostic-metrics > div > span {
+    font-size: 0.9375rem;
+  }
+  .diagnostic-metrics strong {
+    font-size: 1.375rem;
+  }
+  .technical-note {
+    font-size: 0.8125rem;
+  }
+  .process-steps {
+    gap: 30px;
+    margin-top: 32px;
+  }
+  .process-steps > div > span {
+    font-size: 0.875rem;
+  }
+  .process-steps h4 {
+    font-size: 1.375rem;
+  }
+  .process-steps p {
+    font-size: 1rem;
+  }
+  .demo-section {
+    padding-block: 64px;
+  }
+  .demo-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+  }
+  .demo-copy > p {
+    max-width: 38rem;
+    font-size: 1.1875rem;
+    line-height: 1.7;
+  }
+  .demo-topics button {
+    font-size: 0.9375rem;
+    padding: 11px 13px;
+  }
+  .demo-proof {
+    font-size: 1rem;
+  }
+  .conversation {
+    max-width: none;
+  }
+  .conversation-header {
+    padding: 21px 26px;
+  }
+  .conversation-header strong {
+    font-size: 1.1875rem;
+  }
+  .conversation-header div > span,
+  .conversation-caption {
+    font-size: 0.875rem;
+  }
+  .conversation-body {
+    min-height: 0;
+    padding: 23px 26px;
+  }
+  .conversation-date,
+  .chat-questions > span {
+    font-size: 0.75rem;
+  }
+  .chat-message {
+    font-size: 1.0625rem;
+    padding: 16px 18px;
+  }
+  .chat-sender {
+    font-size: 0.875rem;
+  }
+  .chat-message time {
+    font-size: 0.75rem;
+  }
+  .chat-message.answer {
+    min-height: 0;
+  }
+  .chat-questions {
+    padding: 20px 26px;
+  }
+  .chat-questions button {
+    font-size: 0.9375rem;
+    padding: 12px;
+  }
+  .calculator {
+    grid-template-columns: 1.05fr 1fr;
+  }
+  .calculator-inputs,
+  .calculator-result {
+    padding: 36px;
+  }
+  .calculator-inputs h3 {
+    font-size: 1.5rem;
+  }
+  .reset,
+  .calculator-hint {
+    font-size: 0.9375rem;
+  }
+  .input-grid label > span,
+  .input-wrap > span {
+    font-size: 1rem;
+  }
+  .input-wrap input {
+    font-size: 1.375rem;
+    padding-block: 14px;
+  }
+  .input-note,
+  .calculator-result > p,
+  .scenario-note {
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+  .result-eyebrow {
+    font-size: 0.875rem;
+  }
+  .result-number {
+    font-size: clamp(3.1rem, 4vw, 4.5rem);
+  }
+  .result-period,
+  .result-row,
+  .roi-result {
+    font-size: 1rem;
+  }
+  .result-row b {
+    font-size: 1.125rem;
+  }
+  .result-row {
+    margin-bottom: 15px;
+  }
+  .roi-result strong {
+    font-size: 2rem;
+  }
+  .calculator-result .button {
+    margin-top: auto;
+  }
+  .calculator-result > p {
+    margin-bottom: 22px;
+  }
+  .calculation-details summary {
+    font-size: 1rem;
+  }
+  .formula-grid span {
+    font-size: 0.8125rem;
+  }
+  .formula-grid p,
+  .formula-grid b,
+  .calculation-details > p {
+    font-size: 1rem;
+  }
+  .evidence-section {
+    gap: clamp(40px, 5vw, 80px);
+  }
+  .report-visual {
+    padding: 30px;
+  }
+  .report-toolbar,
+  .report-content > .micro,
+  .report-example {
+    font-size: 0.75rem;
+  }
+  .report-content {
+    padding: 32px;
+  }
+  .report-content h3 {
+    font-size: 2rem;
+  }
+  .report-table > div {
+    font-size: 1rem;
+    padding-block: 18px;
+  }
+  .report-table > .report-table-head,
+  .report-table b,
+  .report-bottom {
+    font-size: 0.875rem;
+  }
+  .evidence-section .section-lead {
+    font-size: 1.1875rem;
+    max-width: 40rem;
+  }
+  .evidence-item h4 {
+    font-size: 1.1875rem;
+  }
+  .evidence-item p {
+    font-size: 1rem;
+  }
+  .faq-section {
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 64px;
+    padding-bottom: 64px;
+  }
+  .faq-section h2 {
+    font-size: 3rem;
+  }
+  .faq-list summary,
+  .faq-list p {
+    font-size: 1.125rem;
+  }
+  .final-cta {
+    padding-block: 52px;
+  }
+  .final-inner h2 {
+    font-size: clamp(2.3rem, 2.7vw, 3rem);
+  }
+  .final-inner p {
+    font-size: 1.125rem;
+  }
+  .final-action > span,
+  .footer-top > p,
+  .footer-top > a:last-child {
+    font-size: 1rem;
+  }
+  .footer-bottom {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1350px) {
+  .hero-visual .status-pill {
+    display: none;
+  }
+  .visual-footnote {
+    max-width: 150px;
+  }
+  .diagnostic-layout {
+    grid-template-columns: 285px minmax(0, 1fr);
+  }
+  .diagnostic-metrics {
+    gap: 14px;
+  }
+  .diagnostic-metrics strong {
+    font-size: 1.1875rem;
+  }
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+  .chat-questions > div {
+    grid-template-columns: 1fr;
+  }
+}
