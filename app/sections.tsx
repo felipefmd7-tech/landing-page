@@ -27,67 +27,67 @@ const contact =
   );
 const cases = [
   {
-    title: 'Condição térmica',
+    title: 'Estabilidade térmica',
     icon: Thermometer,
-    tag: 'TEMPERATURA E RESFRIAMENTO',
-    headline: 'A temperatura subiu. Onde começar a investigar?',
+    tag: 'MAIS ESTABILIDADE PARA PRODUZIR',
+    headline: 'A temperatura mudou. A orientação chega até você.',
     description:
-      'Cruze o comportamento do mosto, da água e da troca térmica. A leitura conjunta ajuda a direcionar a investigação antes de decidir uma intervenção.',
+      'Seu especialista digital analisa os dados da fermentação e transforma os desvios em prioridades claras. Você recebe o alerta e a orientação para agir com agilidade e mais segurança.',
     metrics: [
-      ['Mosto acima da referência', '68% do período'],
-      ['Água de resfriamento', 'Dentro da faixa'],
-      ['Prioridade', 'Verificação térmica'],
+      ['Desvio identificado', 'Instabilidade térmica'],
+      ['Alerta automático', 'No WhatsApp'],
+      ['Foco da ação', 'Recuperar estabilidade'],
     ],
     evidence:
-      'O mosto ficou acima da referência em 68% do período, enquanto a água permaneceu na faixa definida para a operação.',
+      'Identificamos instabilidade térmica na unidade demonstrativa. O alerta já traz a prioridade de atenção e uma orientação para a equipe responsável.',
     action:
-      'Verifique o resfriamento do mosto e a confiabilidade dos sensores. Cruze vazão, temperatura e condição de troca antes de intervir.',
-    gain: 'Ao restabelecer a condição térmica, acompanhe a estabilidade das bateladas e o rendimento. O ganho em litros depende de uma melhoria medida ou de uma hipótese explícita.',
-    q: 'Por onde começo?',
+      'Recomendamos priorizar a correção da condição térmica na unidade indicada. Sua equipe recebe a orientação contextualizada para avaliar e executar a intervenção conforme os procedimentos da usina.',
+    gain: 'O objetivo é recuperar a estabilidade e reduzir perdas de rendimento. A ProBio apresenta o impacto estimado e acompanha a evolução após a ação, distinguindo o potencial de ganho do resultado observado.',
+    q: 'Vou precisar acompanhar um painel?',
     reply:
-      'Comece pela temperatura do mosto e pela confiabilidade dos sensores. A água está na faixa neste exemplo; isso direciona a verificação, mas ainda não comprova a causa do desvio.',
+      'Os alertas chegam automaticamente pelo WhatsApp quando identificamos um desvio. Você recebe o que merece atenção e pode aprofundar a orientação na própria conversa.',
   },
   {
-    title: 'Qualidade do CIP',
+    title: 'Consistência da limpeza',
     icon: Droplets,
-    tag: 'LIMPEZA E CONSISTÊNCIA',
-    headline: 'Executar o CIP é uma parte. Avaliar a qualidade é outra.',
+    tag: 'MAIS CONFIANÇA EM CADA CICLO',
+    headline: 'Uma rotina de limpeza que merece a sua confiança.',
     description:
-      'Separe a realização da limpeza do atendimento aos critérios de tempo e temperatura. Compare dornas e turnos dentro da janela efetivamente analisada.',
+      'A ProBio identifica quando a limpeza merece atenção e avisa sua equipe. Você recebe uma recomendação direcionada para proteger a consistência da fermentação e reduzir o risco de retrabalho.',
     metrics: [
-      ['Ciclos realizados', '12 de 12'],
-      ['Ciclos conformes', '4 de 12'],
-      ['Prioridade', 'Qualidade da limpeza'],
+      ['Oportunidade identificada', 'Melhorar consistência'],
+      ['Entrega à equipe', 'Orientação direcionada'],
+      ['Foco da ação', 'Reduzir retrabalho'],
     ],
     evidence:
-      'Todos os 12 ciclos ilustrativos foram realizados, mas somente 4 atenderam aos critérios de tempo e temperatura definidos para o exemplo.',
+      'Identificamos uma oportunidade de melhoria na consistência da limpeza da unidade demonstrativa. A ocorrência foi priorizada para a equipe responsável.',
     action:
-      'Revise a condição térmica e a duração dos ciclos não conformes conforme o procedimento da unidade. A prioridade é a qualidade, não aumentar a frequência indiscriminadamente.',
-    gain: 'Uma limpeza consistente pode reduzir perdas associadas à instabilidade. Quantifique consumo, retrabalho e indicadores fermentativos antes e depois da ação, sem atribuir causalidade apenas ao CIP.',
-    q: 'Preciso fazer mais CIP?',
+      'Recomendamos corrigir a condição de limpeza apontada no alerta. A orientação entregue à sua equipe considera o contexto da unidade e seus procedimentos operacionais.',
+    gain: 'Uma limpeza mais consistente pode reduzir retrabalho e perdas associadas à instabilidade. A ProBio acompanha a evolução para avaliar o efeito da ação na operação.',
+    q: 'Como sei se a ação funcionou?',
     reply:
-      'Neste exemplo, a execução foi de 100%. A oportunidade está na qualidade: investigar por que 8 ciclos não atenderam aos critérios de tempo e temperatura. Aumentar a frequência não resolve necessariamente esse desvio.',
+      'A ProBio acompanha a evolução após a intervenção e entrega uma leitura do que melhorou e do que ainda precisa de atenção. Você recebe o resultado da análise pelo WhatsApp.',
   },
   {
-    title: 'Bateladas e enchimento',
+    title: 'Desempenho das bateladas',
     icon: Layers3,
-    tag: 'TEMPOS E VARIABILIDADE',
-    headline: 'O que muda de uma batelada para a próxima?',
+    tag: 'MAIS POTENCIAL EM CADA BATELADA',
+    headline: 'Oportunidades de produção, já traduzidas em ação.',
     description:
-      'Encontre variações no enchimento, na espera e na centrifugação. Compare nível máximo e razão pé/mosto para entender a consistência do processo.',
+      'Seu especialista digital identifica mudanças de desempenho e destaca onde agir para aproveitar melhor cada batelada. Sua equipe recebe prioridades e recomendações, com clareza sobre o potencial de ganho.',
     metrics: [
-      ['Bateladas avaliadas', '24'],
-      ['Duração média', '10 h 40 min'],
-      ['Variação entre ciclos', '± 45 min'],
+      ['Oportunidade identificada', 'Melhorar desempenho'],
+      ['Entrega à equipe', 'Prioridades claras'],
+      ['Foco da ação', 'Aproveitar capacidade'],
     ],
     evidence:
-      'As 24 bateladas ilustrativas têm duração média de 10 h 40 min e desvio-padrão de 45 minutos. O enchimento concentra a maior variação neste cenário.',
+      'Identificamos uma oportunidade de melhorar o desempenho das bateladas na unidade demonstrativa. Sua equipe recebe a prioridade e a recomendação correspondente.',
     action:
-      'Compare bateladas equivalentes e verifique sequência de alimentação, vazão, nível máximo e razão pé/mosto. Identifique a origem da variação antes de definir novos alvos.',
-    gain: 'Menos variação pode melhorar a previsibilidade. Tempo liberado só vira produção adicional quando há capacidade e condições nos demais estágios da operação.',
-    q: 'Menos tempo significa mais produção?',
+      'Recomendamos atuar na oportunidade priorizada para recuperar desempenho. A ProBio entrega a orientação à equipe e acompanha a evolução após a intervenção.',
+    gain: 'O potencial de produção adicional considera as condições e a capacidade da usina. A ProBio apresenta a estimativa com suas premissas e acompanha os resultados após a ação.',
+    q: 'O ganho é garantido?',
     reply:
-      'Depende do gargalo da planta. Primeiro confirme o tempo recuperável e se alimentação, fermentação, centrifugação e etapas seguintes comportam a produção adicional. A simulação econômica precisa refletir essa restrição.',
+      'O ganho estimado orienta a decisão. O resultado depende das condições da operação e da execução da ação. A ProBio acompanha a evolução para mostrar o que foi observado após a intervenção.',
   },
 ];
 export function Diagnostics() {
@@ -105,8 +105,9 @@ export function Diagnostics() {
           </h2>
         </div>
         <p>
-          Seu histórico ganha contexto. Cada batelada ajuda a entender o
-          processo, encontrar prioridades e orientar a próxima ação.
+          Um especialista digital acompanha sua fermentação e entrega o que
+          merece atenção, por que agir e qual o potencial de ganho. Sua equipe
+          ganha tempo para decidir e atuar.
         </p>
       </div>
       <div className="diagnostic-layout">
@@ -129,8 +130,8 @@ export function Diagnostics() {
             </button>
           ))}
           <p className="tab-note">
-            Também acompanhamos sensores, recirculação, níveis, razão pé/mosto e
-            indícios de passagem de água, conforme os dados disponíveis.
+            Menos tempo procurando respostas. Mais clareza sobre onde agir para
+            proteger o rendimento da sua operação.
           </p>
         </div>
         <div className="diagnostic-detail" aria-live="polite">
@@ -148,7 +149,7 @@ export function Diagnostics() {
           <div className="technical-note">
             <Activity size={16} />
             <span>
-              Exemplo fictício. Referências e critérios são definidos para cada
+              Exemplo ilustrativo. As recomendações são personalizadas para cada
               operação.
             </span>
           </div>
@@ -158,23 +159,23 @@ export function Diagnostics() {
         {[
           {
             n: '01',
-            title: 'Monitorar',
-            text: 'Organize o período, as dornas e os indicadores relevantes.',
+            title: 'Alertas automáticos',
+            text: 'A ProBio acompanha sua fermentação e envia alertas pelo WhatsApp ao identificar desvios.',
           },
           {
             n: '02',
-            title: 'Diagnosticar',
-            text: 'Entenda a evidência, a prioridade e a persistência do desvio.',
+            title: 'Diagnóstico pronto',
+            text: 'Você recebe uma leitura clara do que merece atenção e da prioridade para sua equipe.',
           },
           {
             n: '03',
-            title: 'Recomendar',
-            text: 'Receba uma orientação de verificação e ação com contexto.',
+            title: 'Próximo passo claro',
+            text: 'A recomendação chega com contexto e potencial de ganho para apoiar sua decisão.',
           },
           {
             n: '04',
-            title: 'Acompanhar',
-            text: 'Compare a evolução e avalie o impacto após a ação.',
+            title: 'Evolução acompanhada',
+            text: 'Após a ação, a ProBio acompanha os indicadores e mostra a evolução dos resultados.',
           },
         ].map((item) => (
           <div key={item.n}>
@@ -194,7 +195,7 @@ export function Demonstration() {
   const responses = [c.evidence, c.action, c.gain, c.reply];
   const questions = [
     'Qual é o diagnóstico?',
-    'O que devo verificar?',
+    'Qual é a recomendação?',
     'Qual é o ganho esperado?',
     c.q,
   ];
@@ -204,16 +205,17 @@ export function Demonstration() {
         <div className="demo-copy">
           <div className="eyebrow">02 / UMA CONVERSA QUE MOVE A OPERAÇÃO</div>
           <h2>
-            Uma pergunta.
+            O alerta chega.
             <br />
-            Um caminho mais claro.
+            A decisão avança.
             <br />
             <span>No seu WhatsApp.</span>
           </h2>
           <p>
-            Consulte a situação da fermentação, aprofunde uma ocorrência e
-            entenda o próximo passo. A informação chega onde a sua rotina já
-            acontece.
+            Quando um desvio é identificado, a ProBio avisa você com uma
+            orientação clara. Alertas e recomendações chegam pelo WhatsApp, sem
+            depender de consultas a painéis. Se quiser saber mais, basta
+            continuar a conversa.
           </p>
           <div className="demo-topics" aria-label="Tema da conversa">
             {cases.map((item, i) => (
@@ -232,15 +234,15 @@ export function Demonstration() {
           </div>
           <div className="demo-proof">
             <Check size={17} />
-            <span>Diagnóstico com evidências do período analisado.</span>
+            <span>Alertas automáticos sobre o que merece atenção.</span>
           </div>
           <div className="demo-proof">
             <Check size={17} />
-            <span>Ocorrências novas, persistentes e recorrentes.</span>
+            <span>Diagnóstico pronto para apoiar sua decisão.</span>
           </div>
           <div className="demo-proof">
             <Check size={17} />
-            <span>Orientações para a sua equipe avaliar e executar.</span>
+            <span>Recomendações e potencial de ganho na mesma conversa.</span>
           </div>
           <a
             className="demo-contact"
@@ -269,19 +271,21 @@ export function Demonstration() {
             <div className="chat-message bot">
               <span className="chat-sender">ProBio Solutions</span>
               <p>
-                Olá! Vamos olhar a fermentação?
+                Alerta automático: identificamos uma ocorrência.
                 <br />
-                Selecione uma pergunta para explorar{' '}
+                Sua equipe já tem uma prioridade em{' '}
                 <strong>{c.title.toLowerCase()}</strong>.
               </p>
               <time>08:30</time>
             </div>
-            <div className="chat-message user">
-              {questions[step]}
-              <time>
-                08:31 <CheckCheck size={14} />
-              </time>
-            </div>
+            {step !== 0 && (
+              <div className="chat-message user">
+                {questions[step]}
+                <time>
+                  08:31 <CheckCheck size={14} />
+                </time>
+              </div>
+            )}
             <div
               className="chat-message bot answer"
               aria-live="polite"
@@ -291,7 +295,7 @@ export function Demonstration() {
                 {
                   [
                     'Diagnóstico',
-                    'Caminho de verificação',
+                    'Recomendação',
                     'Impacto esperado',
                     'Entenda a recomendação',
                   ][step]
@@ -302,7 +306,7 @@ export function Demonstration() {
             </div>
           </div>
           <div className="chat-questions">
-            <span>EXPERIMENTE UMA PERGUNTA</span>
+            <span>APROFUNDE O ALERTA, SE QUISER</span>
             <div>
               {questions.map((q, i) => (
                 <button
@@ -409,8 +413,9 @@ export function Impact() {
             </h2>
           </div>
           <p>
-            Explore o impacto econômico de uma hipótese de melhoria. Ajuste as
-            premissas para a sua operação e veja de onde vem cada resultado.
+            Decida com clareza sobre o retorno potencial de uma ação. A ProBio
+            traduz oportunidades em impacto estimado. A simulação abaixo ilustra
+            como pequenas melhorias podem fazer diferença.
           </p>
         </div>
         <div className="calculator">
@@ -602,8 +607,8 @@ export function Evidence() {
             {[
               ['Condição térmica', 'Verificar'],
               ['Qualidade do CIP', 'Verificar'],
-              ['Níveis de enchimento', 'Estável'],
-              ['Razão pé/mosto', 'Estável'],
+              ['Desempenho das bateladas', 'Estável'],
+              ['Evolução da operação', 'Estável'],
             ].map(([label, state]) => (
               <div key={label}>
                 <span>{label}</span>
@@ -627,41 +632,44 @@ export function Evidence() {
         </div>
       </div>
       <div>
-        <div className="eyebrow">04 / CONSTRUA UM HISTÓRICO DE DECISÕES</div>
+        <div className="eyebrow">04 / VISIBILIDADE DO QUE MELHORA</div>
         <h2>
           A ação passa.
           <br />
           <span>O aprendizado fica.</span>
         </h2>
         <p className="section-lead">
-          O WhatsApp aproxima a análise da operação. Os relatórios organizam as
-          evidências para aprofundar a discussão técnica e acompanhar a
-          evolução.
+          A ProBio acompanha o que acontece depois de cada ação e entrega uma
+          visão clara da evolução. Sua equipe recebe as informações pelo
+          WhatsApp e conta com relatórios para apoiar as próximas decisões.
         </p>
         <div className="evidence-item">
           <Clock3 size={21} />
           <div>
-            <h4>Entenda a persistência</h4>
-            <p>Veja o que surgiu, o que continua e o que voltou a acontecer.</p>
+            <h4>Prioridades sempre à vista</h4>
+            <p>
+              Receba atualizações sobre o que melhorou e o que ainda merece
+              atenção.
+            </p>
           </div>
         </div>
         <div className="evidence-item">
           <Activity size={21} />
           <div>
-            <h4>Compare com contexto</h4>
+            <h4>Análise feita para você</h4>
             <p>
-              Avalie períodos e condições equivalentes para interpretar a
-              evolução.
+              A ProBio interpreta a evolução da operação e entrega os pontos
+              relevantes para sua equipe.
             </p>
           </div>
         </div>
         <div className="evidence-item">
           <TrendingUp size={21} />
           <div>
-            <h4>Separe expectativa de resultado</h4>
+            <h4>Visibilidade sobre o retorno</h4>
             <p>
-              Registre a ação e confronte o ganho estimado com os indicadores
-              observados.
+              Acompanhe o potencial estimado e os resultados observados após
+              cada ação, com uma leitura preparada pela ProBio.
             </p>
           </div>
         </div>
@@ -672,15 +680,15 @@ export function Evidence() {
 const faqs = [
   [
     'O que a ProBio Solutions acompanha?',
-    'O acompanhamento reúne diagnósticos de bateladas, temperaturas, resfriamento, CIP, níveis, razão pé/mosto e outros indicadores aplicáveis à operação. A cobertura depende das variáveis, dos sensores e da qualidade dos dados disponíveis.',
+    'A ProBio acompanha a fermentação para identificar desvios e oportunidades de melhoria. Você recebe diagnósticos, prioridades e recomendações voltadas à estabilidade, ao desempenho e ao aproveitamento da operação. O escopo é definido para a realidade da sua unidade.',
   ],
   [
     'Como recebo as informações pelo WhatsApp?',
-    'O canal permite consultar a situação da fermentação, aprofundar ocorrências e receber orientações. O fluxo já foi validado em ambiente de homologação. Na implantação, alinhamos os destinatários, a frequência de análise e a configuração adequada à sua operação.',
+    'Após a implantação, os alertas são enviados automaticamente aos responsáveis quando a ProBio identifica um desvio. A mensagem traz o diagnóstico e a orientação para apoiar a decisão. Sua equipe também pode aprofundar o assunto na própria conversa.',
   ],
   [
-    'De onde vêm os dados da análise?',
-    'O diagnóstico utiliza o histórico operacional disponibilizado pela unidade. Na avaliação inicial, verificamos as fontes, as variáveis, as unidades de medida e a cobertura do período para definir o escopo possível.',
+    'Preciso organizar dados ou consultar painéis todos os dias?',
+    'A ProBio cuida da análise dos dados conectados durante a implantação e entrega as informações pelo WhatsApp. Na rotina, sua equipe recebe os alertas e as recomendações para decidir e agir, sem precisar preparar análises manualmente.',
   ],
   [
     'Como são calculados os ganhos e o ROI?',
@@ -732,11 +740,11 @@ export function FinalSections() {
           <div>
             <div className="eyebrow">A PRÓXIMA DECISÃO COMEÇA AQUI.</div>
             <h2>
-              Mais contexto na operação.
+              Menos tempo analisando.
               <br />
-              <span>Mais potencial em cada batelada.</span>
+              <span>Mais clareza para agir.</span>
             </h2>
-            <p>Vamos olhar para a sua fermentação?</p>
+            <p>Tenha um especialista digital acompanhando sua fermentação.</p>
           </div>
           <div className="final-action">
             <a

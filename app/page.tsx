@@ -133,8 +133,9 @@ export default function Home() {
                 <span>Melhores decisões.</span>
               </h1>
               <p className="hero-description">
-                Da batelada ao resultado: diagnósticos, recomendações e o ganho
-                por trás de cada ação. <strong>Direto no seu WhatsApp.</strong>
+                Seu especialista digital acompanha a fermentação e entrega
+                alertas, recomendações e o potencial de ganho de cada ação.
+                <strong> Direto no seu WhatsApp.</strong>
               </p>
               <div className="hero-actions">
                 <CTA>Leve para sua operação</CTA>
@@ -158,7 +159,7 @@ export default function Home() {
             </span>
             <p>
               <Layers3 />
-              Batelada a batelada
+              Acompanhamento automático
             </p>
             <p>
               <Activity />
