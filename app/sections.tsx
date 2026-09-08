@@ -31,9 +31,9 @@ const cases = [
     title: 'Estabilidade térmica',
     icon: Thermometer,
     tag: 'MAIS ESTABILIDADE PARA PRODUZIR',
-    headline: 'A temperatura mudou. A orientação chega até você.',
+    headline: 'Saiba onde agir para recuperar a estabilidade.',
     description:
-      'Seu especialista digital analisa os dados da fermentação e transforma os desvios em prioridades claras. Você recebe o alerta e a orientação para agir com agilidade e mais segurança.',
+      'O diagnóstico vem com uma recomendação específica para orientar a correção. Sua equipe ganha tempo e um caminho mais assertivo para resolver o desvio térmico.',
     metrics: [
       ['Desvio identificado', 'Instabilidade térmica'],
       ['Alerta automático', 'No WhatsApp'],
@@ -52,9 +52,9 @@ const cases = [
     title: 'Consistência da limpeza',
     icon: Droplets,
     tag: 'MAIS CONFIANÇA EM CADA CICLO',
-    headline: 'Uma rotina de limpeza que merece a sua confiança.',
+    headline: 'Corrija o que compromete a limpeza.',
     description:
-      'A ProBio identifica quando a limpeza merece atenção e avisa sua equipe. Você recebe uma recomendação direcionada para proteger a consistência da fermentação e reduzir o risco de retrabalho.',
+      'Receba o diagnóstico e a orientação de correção para sua equipe atuar no ponto certo, reduzir retrabalho e proteger a fermentação.',
     metrics: [
       ['Oportunidade identificada', 'Melhorar consistência'],
       ['Entrega à equipe', 'Orientação direcionada'],
@@ -73,9 +73,9 @@ const cases = [
     title: 'Desempenho das bateladas',
     icon: Layers3,
     tag: 'MAIS POTENCIAL EM CADA BATELADA',
-    headline: 'Oportunidades de produção, já traduzidas em ação.',
+    headline: 'Transforme oportunidades em próximos passos.',
     description:
-      'Seu especialista digital identifica mudanças de desempenho e destaca onde agir para aproveitar melhor cada batelada. Sua equipe recebe prioridades e recomendações, com clareza sobre o potencial de ganho.',
+      'Identifique o que limita o desempenho e receba uma recomendação de ação com potencial de ganho. Mais direção para aproveitar cada batelada.',
     metrics: [
       ['Oportunidade identificada', 'Melhorar desempenho'],
       ['Entrega à equipe', 'Prioridades claras'],
@@ -100,16 +100,45 @@ export function Diagnostics() {
         <div>
           <div className="eyebrow">01 / ENXERGUE O QUE IMPORTA</div>
           <h2>
-            O desvio é o começo.
+            Diagnóstico claro.
             <br />
-            <span>A decisão é o que importa.</span>
+            <span>Ação direcionada.</span>
           </h2>
         </div>
         <p>
-          Um especialista digital acompanha sua fermentação e entrega o que
-          merece atenção, por que agir e qual o potencial de ganho. Sua equipe
-          ganha tempo para decidir e atuar.
+          Receba o diagnóstico e uma recomendação específica do que fazer. Menos
+          tempo testando hipóteses. Um caminho mais assertivo para resolver.
         </p>
+      </div>
+      <div className="process-steps">
+        {[
+          {
+            n: '01',
+            title: 'Alertas automáticos',
+            text: 'A ProBio identifica desvios e avisa você pelo WhatsApp.',
+          },
+          {
+            n: '02',
+            title: 'Diagnóstico pronto',
+            text: 'Receba a análise do problema e a prioridade de atenção.',
+          },
+          {
+            n: '03',
+            title: 'Próximo passo claro',
+            text: 'Saiba o que fazer, com recomendação e potencial de ganho.',
+          },
+          {
+            n: '04',
+            title: 'Evolução acompanhada',
+            text: 'Após a ação, a ProBio acompanha e mostra os resultados.',
+          },
+        ].map((item) => (
+          <div key={item.n}>
+            <span>{item.n}</span>
+            <h4>{item.title}</h4>
+            <p>{item.text}</p>
+          </div>
+        ))}
       </div>
       <div className="diagnostic-layout">
         <div
@@ -130,61 +159,12 @@ export function Diagnostics() {
               <ArrowUpRight size={17} />
             </button>
           ))}
-          <p className="tab-note">
-            Menos tempo procurando respostas. Mais clareza sobre onde agir para
-            proteger o rendimento da sua operação.
-          </p>
         </div>
         <div className="diagnostic-detail" aria-live="polite">
           <div className="eyebrow">{c.tag}</div>
           <h3>{c.headline}</h3>
           <p>{c.description}</p>
-          <div className="diagnostic-metrics">
-            {c.metrics.map(([label, value]) => (
-              <div key={label}>
-                <span>{label}</span>
-                <strong>{value}</strong>
-              </div>
-            ))}
-          </div>
-          <div className="technical-note">
-            <Activity size={16} />
-            <span>
-              Exemplo ilustrativo. As recomendações são personalizadas para cada
-              operação.
-            </span>
-          </div>
         </div>
-      </div>
-      <div className="process-steps">
-        {[
-          {
-            n: '01',
-            title: 'Alertas automáticos',
-            text: 'A ProBio acompanha sua fermentação e envia alertas pelo WhatsApp ao identificar desvios.',
-          },
-          {
-            n: '02',
-            title: 'Diagnóstico pronto',
-            text: 'Você recebe uma leitura clara do que merece atenção e da prioridade para sua equipe.',
-          },
-          {
-            n: '03',
-            title: 'Próximo passo claro',
-            text: 'A recomendação chega com contexto e potencial de ganho para apoiar sua decisão.',
-          },
-          {
-            n: '04',
-            title: 'Evolução acompanhada',
-            text: 'Após a ação, a ProBio acompanha os indicadores e mostra a evolução dos resultados.',
-          },
-        ].map((item) => (
-          <div key={item.n}>
-            <span>{item.n}</span>
-            <h4>{item.title}</h4>
-            <p>{item.text}</p>
-          </div>
-        ))}
       </div>
     </section>
   );
@@ -529,50 +509,6 @@ export function Impact() {
             )}
           </div>
         </div>
-        <details className="calculation-details">
-          <summary>
-            <span>
-              <FileText size={18} /> Abrir a memória de cálculo
-            </span>
-            <ChevronDown size={19} />
-          </summary>
-          <div className="formula-grid">
-            <div>
-              <span>01 / VOLUME ADICIONAL</span>
-              <p>Produção diária × aumento relativo ÷ 100 × dias</p>
-              <b>
-                {valid
-                  ? `${number.format(v)} × ${g.toLocaleString('pt-BR')}% × ${d} = ${number.format(liters)} L`
-                  : 'Preencha os campos.'}
-              </b>
-            </div>
-            <div>
-              <span>02 / MARGEM ADICIONAL</span>
-              <p>Volume adicional × margem por litro</p>
-              <b>
-                {valid
-                  ? `${number.format(liters)} L × R$ ${m.toLocaleString('pt-BR')} = ${money.format(contribution)}`
-                  : 'Preencha os campos.'}
-              </b>
-            </div>
-            <div>
-              <span>03 / IMPACTO LÍQUIDO</span>
-              <p>Margem adicional − custo total da ação</p>
-              <b>
-                {valid
-                  ? `${money.format(contribution)} − ${money.format(c)} = ${money.format(net)}`
-                  : 'Preencha os campos.'}
-              </b>
-            </div>
-          </div>
-          <p>
-            O aumento informado é relativo à produção atual, não uma variação em
-            pontos percentuais de rendimento fermentativo. Esta simulação não
-            prevê o efeito de uma recomendação específica. O resultado depende
-            da validação da hipótese, da execução da ação e da capacidade da
-            planta.
-          </p>
-        </details>
         <p className="scenario-note">
           Estimativa de cenário, não resultado comprovado ou garantia de
           retorno. Os valores iniciais são fictícios e não representam preço da

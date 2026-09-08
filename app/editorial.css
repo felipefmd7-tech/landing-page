@@ -1,0 +1,157 @@
+/* Short headlines, a clear reading order and restrained line lengths. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+.section-intro > p,
+.demo-copy > p,
+.section-lead {
+  max-width: 38rem;
+}
+#diagnosticos .section-intro {
+  align-items: center;
+}
+#diagnosticos .process-steps {
+  margin: 0.75rem 0 1.5rem;
+  gap: 1.5rem;
+}
+#diagnosticos .process-steps > div {
+  padding-top: 0.7rem;
+}
+#diagnosticos .process-steps > div > span {
+  color: #47734d;
+  font-size: 0.875rem;
+}
+#diagnosticos .process-steps h4 {
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+#diagnosticos .process-steps p {
+  font-size: 1rem;
+  line-height: 1.45;
+  max-width: 27ch;
+}
+#diagnosticos .diagnostic-layout {
+  display: block;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+#diagnosticos .diagnostic-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+#diagnosticos .diagnostic-tab {
+  font-size: 0.9375rem;
+  padding: 0.7rem;
+  margin: 0;
+  border-radius: 0.4rem 0.4rem 0 0;
+  border-bottom: 2px solid #dce5e4;
+}
+#diagnosticos .diagnostic-tab.selected {
+  border-bottom-color: #568c61;
+}
+#diagnosticos .diagnostic-tab > svg:last-child {
+  display: none;
+}
+#diagnosticos .diagnostic-detail {
+  padding: 1.25rem 1.5rem;
+  min-height: 0;
+  background: #f3f7f6;
+}
+#diagnosticos .diagnostic-detail h3 {
+  max-width: 42ch;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+#diagnosticos .diagnostic-detail > p {
+  max-width: 70ch;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#diagnosticos .diagnostic-detail .eyebrow {
+  font-size: 0.75rem;
+}
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-contact > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+.linkedin-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid #b9cfc5;
+  border-radius: 50%;
+  color: #244838;
+}
+a.linkedin-icon:hover {
+  background: #e7f1e4;
+}
+@media (min-width: 1000px) {
+  h1 {
+    font-weight: 600;
+    line-height: 1.05;
+  }
+  h2,
+  .demo-copy h2,
+  .faq-section h2,
+  .final-inner h2 {
+    font-weight: 600;
+    letter-spacing: -0.035em;
+  }
+  .section-intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .section-intro > p,
+  .demo-copy > p {
+    font-size: 1.0625rem;
+    line-height: 1.55;
+  }
+  #diagnosticos .section-intro {
+    margin-bottom: 0.75rem;
+  }
+  .hero-description {
+    max-width: 34rem;
+  }
+  .final-inner > div:first-child {
+    max-width: 44rem;
+  }
+}
+@media (max-width: 699px) {
+  #diagnosticos .process-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  #diagnosticos .diagnostic-tabs {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  #diagnosticos .diagnostic-tab {
+    border-radius: 0.3rem;
+  }
+  #diagnosticos .diagnostic-detail {
+    padding: 1rem;
+  }
+  .footer-contact {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
