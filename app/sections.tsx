@@ -115,22 +115,22 @@ export function Diagnostics() {
           {
             n: '01',
             title: 'Alertas automáticos',
-            text: 'A ProBio identifica desvios e avisa você pelo WhatsApp.',
+            text: 'A ProBio acompanha sua fermentação e envia alertas pelo WhatsApp ao identificar desvios.',
           },
           {
             n: '02',
             title: 'Diagnóstico pronto',
-            text: 'Receba a análise do problema e a prioridade de atenção.',
+            text: 'Você recebe uma leitura clara do que merece atenção e da prioridade para sua equipe.',
           },
           {
             n: '03',
             title: 'Próximo passo claro',
-            text: 'Saiba o que fazer, com recomendação e potencial de ganho.',
+            text: 'A recomendação chega com contexto e potencial de ganho para apoiar sua decisão.',
           },
           {
             n: '04',
             title: 'Evolução acompanhada',
-            text: 'Após a ação, a ProBio acompanha e mostra os resultados.',
+            text: 'Após a ação, a ProBio acompanha os indicadores e mostra a evolução dos resultados.',
           },
         ].map((item) => (
           <div key={item.n}>

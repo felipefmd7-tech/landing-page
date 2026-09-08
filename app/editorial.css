@@ -155,3 +155,73 @@ a.linkedin-icon:hover {
     justify-content: center;
   }
 }
+/* Keep the introduction on exactly the same column boundary as the calculator. */
+@media (min-width: 1000px) {
+  .impact-section .section-intro {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    column-gap: 0;
+    padding-inline: 1px;
+  }
+  .impact-section .section-intro > p {
+    max-width: none;
+    padding: 0;
+  }
+  .faq-cinema .faq-section {
+    align-items: center;
+  }
+  .faq-cinema .faq-section h2 {
+    font-size: clamp(2.6rem, 3.6vw, 4.25rem);
+    line-height: 1.1;
+    margin-block: 1rem 1.5rem;
+  }
+  .faq-cinema .faq-section .eyebrow {
+    font-size: 0.9375rem;
+  }
+  .faq-cinema .faq-section .text-link {
+    font-size: 1.125rem;
+  }
+  .faq-cinema .faq-list summary {
+    font-size: 1.125rem;
+    padding-block: 1rem;
+  }
+  .faq-cinema .faq-list p {
+    font-size: 1.0625rem;
+  }
+  .final-inner {
+    gap: 3rem;
+  }
+  .final-inner > div:first-child {
+    max-width: 56rem;
+  }
+  .final-inner h2 {
+    font-size: clamp(2.4rem, 3.4vw, 4rem);
+    line-height: 1.1;
+    margin-block: 1rem;
+  }
+  .final-inner .eyebrow {
+    font-size: 0.9375rem;
+  }
+  .final-inner p {
+    font-size: 1.1875rem;
+    line-height: 1.5;
+    max-width: 46rem;
+  }
+  .final-action .button {
+    font-size: 1.125rem;
+    padding: 1rem 1.25rem;
+  }
+  .final-action > span {
+    font-size: 1.0625rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .final-inner {
+    gap: 1.5rem;
+  }
+  .final-inner h2 {
+    font-size: 2.25rem;
+  }
+  .final-action .button {
+    font-size: 1rem;
+  }
+}
