@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import HeroVideo from './hero-video';
 import { calculateScenario } from '../lib/roi';
 import {
   ArrowUpRight,
@@ -706,33 +707,39 @@ const faqs = [
 export function FinalSections() {
   return (
     <>
-      <section className="faq-section shell">
-        <div>
-          <div className="eyebrow">ANTES DE CONVERSARMOS</div>
-          <h2>
-            O que você
-            <br />
-            <span>precisa saber.</span>
-          </h2>
-          <a
-            className="text-link"
-            href={contact}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Fale com a nossa equipe <ArrowUpRight size={16} />
-          </a>
-        </div>
-        <div className="faq-list">
-          {faqs.map(([q, a]) => (
-            <details key={q} name="perguntas-frequentes">
-              <summary>
-                {q}
-                <ChevronDown size={17} />
-              </summary>
-              <p>{a}</p>
-            </details>
-          ))}
+      <section className="faq-cinema" aria-label="Perguntas frequentes">
+        <HeroVideo
+          src="/media/industria-tarde-loop.mp4"
+          poster="/media/industria-tarde-poster.jpg"
+        />
+        <div className="faq-section shell">
+          <div>
+            <div className="eyebrow">ANTES DE CONVERSARMOS</div>
+            <h2>
+              O que você
+              <br />
+              <span>precisa saber.</span>
+            </h2>
+            <a
+              className="text-link"
+              href={contact}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fale com a nossa equipe <ArrowUpRight size={16} />
+            </a>
+          </div>
+          <div className="faq-list">
+            {faqs.map(([q, a]) => (
+              <details key={q} name="perguntas-frequentes">
+                <summary>
+                  {q}
+                  <ChevronDown size={17} />
+                </summary>
+                <p>{a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
       <section className="final-cta" id="contato">

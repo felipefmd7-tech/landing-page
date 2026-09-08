@@ -3,7 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { Pause, Play } from 'lucide-react';
 
-export default function HeroVideo() {
+export default function HeroVideo({
+  src = '/media/fermentacao-loop.mp4',
+  poster = '/media/fermentacao-poster.jpg',
+}: { src?: string; poster?: string } = {}) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const pausedByUser = useRef(false);
   const [playing, setPlaying] = useState(false);
@@ -25,8 +28,7 @@ export default function HeroVideo() {
         !connection?.saveData &&
         !pausedByUser.current
       ) {
-        if (!video.getAttribute('src'))
-          video.src = '/media/fermentacao-loop.mp4';
+        if (!video.getAttribute('src')) video.src = src;
         void video.play().catch(() => {
           /* Keep the poster and offer manual play. */
         });
@@ -48,7 +50,7 @@ export default function HeroVideo() {
       document.removeEventListener('visibilitychange', sync);
       video.pause();
     };
-  }, []);
+  }, [src]);
 
   const toggle = () => {
     const video = videoRef.current;
@@ -58,7 +60,7 @@ export default function HeroVideo() {
       video.pause();
     } else {
       pausedByUser.current = false;
-      if (!video.getAttribute('src')) video.src = '/media/fermentacao-loop.mp4';
+      if (!video.getAttribute('src')) video.src = src;
       void video.play().catch(() => {
         /* A blocked attempt leaves the play control available. */
       });
@@ -70,7 +72,7 @@ export default function HeroVideo() {
       <video
         ref={videoRef}
         className="hero-film"
-        poster="/media/fermentacao-poster.jpg"
+        poster={poster}
         muted
         loop
         playsInline

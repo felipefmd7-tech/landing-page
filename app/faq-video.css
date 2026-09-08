@@ -1,0 +1,62 @@
+.faq-cinema {
+  position: relative;
+  isolation: isolate;
+  background: #102b35 url('/media/industria-tarde-poster.jpg') center / cover;
+  color: #fff;
+  scroll-snap-align: start;
+}
+.faq-cinema .hero-shade {
+  background: linear-gradient(90deg, #061b27b8, #061b2780 45%, #061b27bb);
+}
+.faq-cinema .faq-section {
+  position: relative;
+  z-index: 2;
+  padding-top: max(2rem, 3svh);
+  padding-bottom: max(4.5rem, 5svh);
+  scroll-snap-align: none;
+}
+.faq-cinema h2 span {
+  color: #b4f28f;
+}
+.faq-cinema .eyebrow {
+  color: #d1e8dc;
+}
+.faq-cinema .faq-list {
+  background: #071e29eb;
+  border: 1px solid #ffffff30;
+  border-radius: 0.75rem;
+  padding: 0 1.25rem;
+}
+.faq-cinema .faq-list details {
+  border-color: #ffffff30;
+}
+.faq-cinema .faq-list details:first-child {
+  border-top: 0;
+}
+.faq-cinema .faq-list details:last-child {
+  border-bottom: 0;
+}
+.faq-cinema .faq-list p {
+  color: #d9e5e1;
+}
+.faq-cinema .faq-list summary {
+  color: #fff;
+}
+.faq-cinema .text-link {
+  color: #fff;
+}
+.faq-cinema .film-toggle {
+  bottom: 1rem;
+  right: 4%;
+}
+.faq-cinema :focus-visible {
+  outline-color: #b4f28f;
+}
+@media (max-width: 999px) {
+  .faq-cinema .hero-shade {
+    background: #061b27b8;
+  }
+  .faq-cinema .faq-section {
+    gap: 2rem;
+  }
+}
