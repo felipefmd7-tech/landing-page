@@ -456,6 +456,41 @@
   }
 }
 
+@media (min-width: 1000px) and (min-height: 600px) and (max-height: 800px) {
+  .calculator-result {
+    line-height: 1.25;
+  }
+  .result-number {
+    font-size: 2.5rem;
+    margin-top: 0.25rem;
+  }
+  .result-divider {
+    margin-block: 0.3rem;
+  }
+  .result-row {
+    margin-bottom: 0.3rem;
+  }
+  .roi-result {
+    padding-top: 0.3rem;
+    margin-top: 0;
+  }
+  .roi-result strong {
+    font-size: 1.5rem;
+  }
+  .calculator-result > p {
+    margin-block: 0.2rem 0.4rem;
+  }
+  .input-grid {
+    gap: 0.5rem 1rem;
+  }
+  .impact-section .section-intro h2 {
+    font-size: 1.75rem;
+  }
+  .impact-section .section-intro > p {
+    line-height: 1.4;
+  }
+}
+
 /* Narrow windows, phones and enlarged text keep a natural, accessible flow. */
 @media (max-width: 999px), (max-height: 599px) {
   html {
