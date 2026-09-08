@@ -225,3 +225,18 @@ a.linkedin-icon:hover {
     font-size: 1rem;
   }
 }
+.editor-launcher {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 90;
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 1px solid #a8ed78;
+  background: #102b35;
+  color: white;
+  font:
+    600 14px Arial,
+    sans-serif;
+  box-shadow: 0 3px 12px #0003;
+}

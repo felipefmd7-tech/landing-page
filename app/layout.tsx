@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { headers } from 'next/headers';
+import { publicSettings, isEditor } from '../lib/editor-store';
+import { settingsCSS } from '../lib/visual-settings';
 import './globals.css';
 import './viewport.css';
 import './faq-video.css';
@@ -16,12 +19,23 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-export default function RootLayout({
+export const dynamic = 'force-dynamic';
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const settings = await publicSettings();
+  const owner = isEditor(new Headers(await headers()));
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <style id="published-visual-settings">{settingsCSS(settings)}</style>
+        {children}
+        {owner && (
+          <a className="editor-launcher" href="/editor">
+            Ajustar aparência
+          </a>
+        )}
+      </body>
     </html>
   );
 }

@@ -520,7 +520,7 @@ export function Impact() {
 }
 export function Evidence() {
   return (
-    <section className="section shell evidence-section">
+    <section className="section shell evidence-section" id="evolucao">
       <div className="report-visual">
         <div className="report-toolbar">
           <FileText size={17} />
@@ -643,7 +643,11 @@ const faqs = [
 export function FinalSections() {
   return (
     <>
-      <section className="faq-cinema" aria-label="Perguntas frequentes">
+      <section
+        className="faq-cinema"
+        id="perguntas"
+        aria-label="Perguntas frequentes"
+      >
         <HeroVideo
           src="/media/industria-tarde-loop.mp4"
           poster="/media/industria-tarde-poster.jpg"

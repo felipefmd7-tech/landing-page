@@ -18,6 +18,18 @@ A integração de WhatsApp foi informada como funcional e em fase final de desen
 A calculadora é um simulador de cenário, não um motor que prevê o ganho de uma recomendação. Os valores iniciais são ilustrativos, não preço comercial. Aumento relativo de produção não equivale a pontos percentuais de rendimento. Ganho potencial e resultado observado são apresentados separadamente.
 
 ## Desenvolvimento
+### Editor visual
+
+Acesse `/editor` com a conta proprietária configurada em `EDITOR_EMAIL` no Sites. Selecione uma seção, escolha computador ou celular e ative os ajustes desejados. A prévia acompanha as mudanças de fonte, espaçamento e largura.
+
+**Salvar rascunho** guarda o trabalho sem alterar a LP. **Publicar ajustes** aplica o visual à página. Os ajustes ficam no banco D1, persistem entre acessos e novas publicações de código e não dependem do navegador. **Restaurar seção** recupera os estilos originais da seção e dispositivo selecionados; publique para aplicar. Alterações simultâneas são protegidas por revisão.
+
+O acesso exige identidade autenticada pelo Sites; a API verifica autorização e origem. Para desenvolvimento local, use `.dev.vars` (ignorado pelo Git) com `EDITOR_EMAIL=seedy@sites.test` e a autenticação de desenvolvimento do Sites. A migração está em `drizzle/`.
+
+Testes: `node tests/visual-settings.mjs` e, com servidor e banco local disponíveis, `node tests/editor-api.mjs http://localhost:3001`. O teste da API recusa endereços externos e restaura os ajustes locais ao terminar.
+
+### Comandos
+
 `npm install`
 `npm run dev`
 `npm run build`
