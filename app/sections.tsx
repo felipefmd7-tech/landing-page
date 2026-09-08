@@ -745,13 +745,19 @@ export function FinalSections() {
       <section className="final-cta" id="contato">
         <div className="shell final-inner">
           <div>
-            <div className="eyebrow">A PRÓXIMA DECISÃO COMEÇA AQUI.</div>
+            <div className="eyebrow">
+              LEVE A FERMENTAÇÃO PARA A PALMA DA SUA MÃO
+            </div>
             <h2>
-              Menos tempo analisando.
+              Pronto para transformar dados de fermentação
               <br />
-              <span>Mais clareza para agir.</span>
+              <span>em mais potencial de produção?</span>
             </h2>
-            <p>Tenha um especialista digital acompanhando sua fermentação.</p>
+            <p>
+              Agende uma demonstração personalizada com a ProBio Solutions e
+              descubra como identificar oportunidades de produzir mais etanol,
+              com diagnósticos e recomendações direto no seu WhatsApp.
+            </p>
           </div>
           <div className="final-action">
             <a
@@ -761,7 +767,7 @@ export function FinalSections() {
               rel="noopener noreferrer"
             >
               <MessageCircle size={19} />
-              Conversar pelo WhatsApp
+              Agendar demonstração
               <ArrowUpRight size={19} />
             </a>
             <span>+55 16 99145-7282</span>

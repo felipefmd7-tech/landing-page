@@ -60,3 +60,15 @@
     gap: 2rem;
   }
 }
+.final-inner > div:first-child {
+  flex: 1;
+  min-width: 0;
+  max-width: 48rem;
+}
+.final-inner p {
+  max-width: 42rem;
+  line-height: 1.6;
+}
+.final-action {
+  flex-shrink: 0;
+}
