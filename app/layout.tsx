@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './viewport.css';
 export const metadata: Metadata = {
   title: 'ProBio Solutions | Sua fermentação na palma da mão',
   description:

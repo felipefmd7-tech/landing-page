@@ -725,7 +725,7 @@ export function FinalSections() {
         </div>
         <div className="faq-list">
           {faqs.map(([q, a]) => (
-            <details key={q}>
+            <details key={q} name="perguntas-frequentes">
               <summary>
                 {q}
                 <ChevronDown size={17} />

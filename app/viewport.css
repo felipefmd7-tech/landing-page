@@ -1,0 +1,469 @@
+/* Fit the desktop composition to available browser space, not monitor inches.
+   Minimum heights deliberately allow expansion for enlarged text and disclosures. */
+@media (min-width: 1000px) and (min-height: 600px) {
+  html {
+    font-size: clamp(16px, min(1.05vw, 1.75svh), 32px);
+    scroll-padding-top: 0;
+    scroll-snap-type: y proximity;
+  }
+  body {
+    font-size: 1rem;
+  }
+  .shell {
+    width: min(100rem, 92%);
+  }
+  .header {
+    height: 5rem;
+  }
+  .header-inner {
+    gap: 1.5rem;
+  }
+  .brand > svg {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .brand > span {
+    font-size: 1.8rem;
+  }
+  .brand-sub {
+    font-size: 0.6875rem;
+  }
+  .navigation,
+  .header-cta {
+    font-size: 1rem;
+  }
+  .hero-cinema {
+    scroll-snap-align: start;
+    scroll-margin-top: 5rem;
+  }
+  .hero-cinema .hero {
+    min-height: calc(100svh - 9rem);
+    padding-block: 1.5rem 3.5rem;
+  }
+  .hero-cinema .hero-copy {
+    width: 60%;
+    max-width: 47rem;
+  }
+  h1 {
+    font-size: clamp(2.75rem, min(4.5vw, 8svh), 5rem);
+    margin-block: 1rem;
+  }
+  h2,
+  .demo-copy h2,
+  .faq-section h2,
+  .final-inner h2 {
+    font-size: clamp(1.75rem, min(3.3vw, 5.5svh), 3.5rem);
+    line-height: 1.12;
+    margin-block: 0.75rem;
+  }
+  .eyebrow,
+  .demo-copy .eyebrow,
+  .diagnostic-detail .eyebrow,
+  .final-inner .eyebrow {
+    font-size: 0.8125rem;
+    letter-spacing: 0.08em;
+  }
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.55;
+    max-width: 36rem;
+  }
+  .hero-actions {
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .hero-note {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+  }
+  .button {
+    font-size: 1rem;
+    padding: 0.8rem 1.1rem;
+  }
+  .text-link {
+    font-size: 1rem;
+  }
+  .film-toggle {
+    right: 4%;
+    bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  .principles-inner {
+    min-height: 4rem;
+    padding-block: 0.5rem;
+    gap: 1rem;
+  }
+  .principles-inner > span {
+    font-size: 0.75rem;
+  }
+  .principles p {
+    font-size: 0.875rem;
+    gap: 0.5rem;
+  }
+  main > .section,
+  .demo-section,
+  .faq-section {
+    min-height: 100svh;
+    padding-block: clamp(1rem, 3svh, 3rem);
+    scroll-snap-align: start;
+    scroll-margin-top: 0;
+  }
+  #diagnosticos,
+  .impact-section,
+  .demo-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 2rem;
+    margin-bottom: clamp(0.8rem, 2svh, 2rem);
+  }
+  .section-intro > p {
+    max-width: 40rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .diagnostic-layout {
+    grid-template-columns: minmax(14rem, 0.65fr) 2fr;
+  }
+  .diagnostic-tabs {
+    padding: 1rem;
+  }
+  .diagnostic-tab {
+    padding: 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    gap: 0.5rem;
+  }
+  .tab-note {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0.75rem 0.7rem 0;
+  }
+  .diagnostic-detail {
+    padding: 1.25rem 1.5rem;
+    min-height: 0;
+  }
+  .diagnostic-detail h3 {
+    font-size: 1.625rem;
+    margin-block: 0.6rem;
+    max-width: none;
+  }
+  .diagnostic-detail > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 56rem;
+  }
+  .diagnostic-metrics {
+    margin-top: 0.9rem;
+    padding-top: 0.8rem;
+    gap: 1rem;
+  }
+  .diagnostic-metrics > div > span {
+    font-size: 0.875rem;
+    margin-bottom: 0.2rem;
+  }
+  .diagnostic-metrics strong {
+    font-size: 1.125rem;
+  }
+  .technical-note {
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
+  }
+  .process-steps {
+    gap: 1.5rem;
+    margin-top: clamp(0.8rem, 2svh, 2rem);
+  }
+  .process-steps > div {
+    padding-top: 0.6rem;
+  }
+  .process-steps > div > span {
+    font-size: 0.75rem;
+  }
+  .process-steps h4 {
+    font-size: 1.125rem;
+    margin-block: 0.3rem;
+  }
+  .process-steps p {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+  .demo-grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 3rem;
+  }
+  .demo-copy > p {
+    max-width: 38rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .demo-topics {
+    margin-block: 1rem;
+    gap: 0.4rem;
+  }
+  .demo-topics button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+  .demo-proof {
+    font-size: 1rem;
+    margin-block: 0.6rem;
+  }
+  .demo-contact {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+  .conversation {
+    max-width: none;
+  }
+  .conversation-header {
+    padding: 0.65rem 1rem;
+  }
+  .conversation-header strong {
+    font-size: 1rem;
+  }
+  .conversation-header div > span,
+  .conversation-caption {
+    font-size: 0.75rem;
+  }
+  .conversation-body {
+    min-height: 0;
+    padding: 0.75rem 1rem;
+  }
+  .conversation-date {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+  }
+  .chat-message {
+    max-width: 96%;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .chat-message.answer {
+    min-height: 0;
+  }
+  .chat-sender {
+    font-size: 0.8125rem;
+  }
+  .chat-message time {
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+  }
+  .chat-questions {
+    padding: 0.6rem 1rem;
+  }
+  .chat-questions > span {
+    font-size: 0.75rem;
+  }
+  .chat-questions > div {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0.4rem;
+  }
+  .chat-questions button {
+    font-size: 0.875rem;
+    line-height: 1.3;
+    padding: 0.5rem;
+  }
+  .conversation-caption {
+    padding: 0.3rem;
+  }
+  .calculator {
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .calculator-inputs,
+  .calculator-result {
+    padding: 1rem 1.25rem;
+  }
+  .calculator-inputs h3 {
+    font-size: 1.25rem;
+  }
+  .reset,
+  .calculator-hint {
+    font-size: 0.875rem;
+  }
+  .calculator-hint {
+    margin-top: 0.25rem;
+  }
+  .input-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem 1rem;
+    margin-top: 0.75rem;
+  }
+  .input-grid label > span,
+  .input-wrap > span {
+    font-size: 0.875rem;
+  }
+  .input-grid label > span {
+    margin-bottom: 0.25rem;
+  }
+  .input-wrap input {
+    font-size: 1.125rem;
+    padding-block: 0.5rem;
+  }
+  .input-note {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+  .result-eyebrow {
+    font-size: 0.8125rem;
+  }
+  .result-number {
+    font-size: 3rem;
+    margin-top: 0.4rem;
+  }
+  .result-period {
+    font-size: 0.875rem;
+    margin-top: 0.2rem;
+  }
+  .result-divider {
+    margin-block: 0.6rem;
+  }
+  .result-row {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  .result-row b {
+    font-size: 1rem;
+  }
+  .roi-result {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    margin-top: 0.25rem;
+  }
+  .roi-result strong {
+    font-size: 1.75rem;
+  }
+  .calculator-result > p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-block: 0.3rem 0.6rem;
+  }
+  .calculator-result .button {
+    font-size: 1rem;
+    padding: 0.6rem;
+    margin-top: auto;
+  }
+  .calculation-details {
+    margin-top: 0.5rem;
+  }
+  .calculation-details summary {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+  .scenario-note {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+  }
+  .evidence-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .report-visual {
+    padding: 1.25rem;
+  }
+  .report-toolbar,
+  .report-content > .micro,
+  .report-example {
+    font-size: 0.75rem;
+  }
+  .report-content {
+    padding: 1.25rem;
+  }
+  .report-content h3 {
+    font-size: 1.75rem;
+    margin-block: 0.75rem;
+  }
+  .report-table > div {
+    font-size: 1rem;
+    padding-block: 0.75rem;
+  }
+  .report-table > .report-table-head,
+  .report-table b,
+  .report-bottom {
+    font-size: 0.875rem;
+  }
+  .report-bottom {
+    padding-top: 0.75rem;
+  }
+  .evidence-section .section-lead {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 40rem;
+    margin-bottom: 1rem;
+  }
+  .evidence-item {
+    margin-top: 0.8rem;
+    gap: 0.75rem;
+  }
+  .evidence-item h4 {
+    font-size: 1.125rem;
+  }
+  .evidence-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .faq-section {
+    grid-template-columns: 0.7fr 1.3fr;
+    align-content: center;
+    gap: 3rem;
+  }
+  .faq-list summary {
+    font-size: 1rem;
+    padding-block: 0.9rem;
+  }
+  .faq-list p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-bottom: 0.8rem;
+  }
+  .final-cta {
+    min-height: calc(100svh - 10rem);
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+    scroll-snap-align: start;
+  }
+  .final-inner p,
+  .final-action > span {
+    font-size: 1rem;
+  }
+  .footer {
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-top {
+    padding-block: 1.25rem;
+  }
+  .footer-top > p,
+  .footer-top > a:last-child {
+    font-size: 0.875rem;
+  }
+  .footer-bottom {
+    padding-block: 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Narrow windows, phones and enlarged text keep a natural, accessible flow. */
+@media (max-width: 999px), (max-height: 599px) {
+  html {
+    scroll-snap-type: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-snap-type: none;
+  }
+}
